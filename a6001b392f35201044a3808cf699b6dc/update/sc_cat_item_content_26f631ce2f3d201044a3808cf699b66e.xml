@@ -5,6 +5,7 @@
         <availability>on_desktop</availability>
         <billable>false</billable>
         <category/>
+        <checked_out/>
         <content_type>literal</content_type>
         <cost>0</cost>
         <custom_cart/>
@@ -98,6 +99,7 @@ workflow.scratchpad.userDetails &#61; userOutput;</code></pre>
         <display_price_property>non_zero</display_price_property>
         <entitlement_script/>
         <flow_designer_flow/>
+        <fulfillment_automation_level/>
         <group/>
         <hide_sp>false</hide_sp>
         <icon/>
@@ -128,9 +130,11 @@ workflow.scratchpad.userDetails &#61; userOutput;</code></pre>
         <omit_price>false</omit_price>
         <order>0</order>
         <ordered_item_link/>
+        <owner/>
         <picture/>
         <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=26f631ce2f3d201044a3808cf699b66e&amp;sysparm_preview=true", "summary");</preview>
         <price>0</price>
+        <published_ref/>
         <recurring_frequency/>
         <recurring_price>0</recurring_price>
         <request_method/>
@@ -138,9 +142,11 @@ workflow.scratchpad.userDetails &#61; userOutput;</code></pre>
         <sc_catalogs/>
         <sc_ic_item_staging/>
         <sc_ic_version/>
+        <sc_template/>
         <short_description>Presentation Documentation</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
+        <state/>
         <sys_class_name>sc_cat_item_content</sys_class_name>
         <sys_created_by>kevin.dugger</sys_created_by>
         <sys_created_on>2021-01-20 17:00:13</sys_created_on>
@@ -154,7 +160,9 @@ workflow.scratchpad.userDetails &#61; userOutput;</code></pre>
         <sys_updated_by>kevin.dugger</sys_updated_by>
         <sys_updated_on>2021-01-20 17:26:40</sys_updated_on>
         <target>internal</target>
+        <taxonomy_topic/>
         <template/>
+        <template_manager_roles/>
         <type>item</type>
         <url/>
         <use_sc_layout>true</use_sc_layout>

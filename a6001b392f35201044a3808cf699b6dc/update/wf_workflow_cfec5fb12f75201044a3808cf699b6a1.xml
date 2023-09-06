@@ -271,7 +271,7 @@ while (userRecs.next()) {&#13;
 }&#13;
 &#13;
 workflow.scratchpad.userDetails = userOutput;</value>
-        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+        <variable display_value="Script">c35ddef20a0a0ba96248a7090eccd518</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -295,7 +295,7 @@ while (userRecs.next()) {&#13;
 }&#13;
 &#13;
 workflow.scratchpad.userDetails = userOutput;</value>
-        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+        <variable display_value="Script">c35ddef20a0a0ba96248a7090eccd518</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="Parse List Collector">21d3a9022f3d201044a3808cf699b664</activity>
@@ -359,7 +359,7 @@ workflow.scratchpad.userDetails = userOutput;</value>
         <sys_updated_by>kevin.dugger</sys_updated_by>
         <sys_updated_on>2021-01-20 15:34:40</sys_updated_on>
         <value>current.variables.resulting_user_list = "Some User : Some Users Manager";</value>
-        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+        <variable display_value="Script">c35ddef20a0a0ba96248a7090eccd518</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -373,7 +373,7 @@ workflow.scratchpad.userDetails = userOutput;</value>
         <sys_updated_by>kevin.dugger</sys_updated_by>
         <sys_updated_on>2021-01-20 15:34:40</sys_updated_on>
         <value>current.variables.resulting_user_list = "Some User : Some Users Manager";</value>
-        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+        <variable display_value="Script">c35ddef20a0a0ba96248a7090eccd518</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="Populate User Details">61d3a9022f3d201044a3808cf699b665</activity>
@@ -437,7 +437,7 @@ workflow.scratchpad.userDetails = userOutput;</value>
         <sys_updated_by>kevin.dugger</sys_updated_by>
         <sys_updated_on>2021-01-20 15:34:40</sys_updated_on>
         <value>current.variables.resulting_user_list = workflow.scratchpad.userDetails;</value>
-        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+        <variable display_value="Script">c35ddef20a0a0ba96248a7090eccd518</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -451,7 +451,7 @@ workflow.scratchpad.userDetails = userOutput;</value>
         <sys_updated_by>kevin.dugger</sys_updated_by>
         <sys_updated_on>2021-01-20 15:34:40</sys_updated_on>
         <value>current.variables.resulting_user_list = workflow.scratchpad.userDetails;</value>
-        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+        <variable display_value="Script">c35ddef20a0a0ba96248a7090eccd518</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="Populate User Details">69d3a9022f3d201044a3808cf699b662</activity>
@@ -542,7 +542,7 @@ function ifScript() {&#13;
 	&#13;
 	return;&#13;
 }</value>
-        <variable display_value="">c35e50810a0a0ba96248a709b450fc32</variable>
+        <variable display_value="Script">c35e50810a0a0ba96248a709b450fc32</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -556,7 +556,7 @@ function ifScript() {&#13;
         <sys_updated_by>kevin.dugger</sys_updated_by>
         <sys_updated_on>2021-01-20 15:34:40</sys_updated_on>
         <value>1</value>
-        <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
+        <variable display_value="Advanced">493d2c1d0a6a803f3217a75738ea3289</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -570,7 +570,7 @@ function ifScript() {&#13;
         <sys_updated_by>kevin.dugger</sys_updated_by>
         <sys_updated_on>2021-01-20 15:34:40</sys_updated_on>
         <value/>
-        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
+        <variable display_value="Condition">493cba6a0a6a803f07df24b118473551</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -584,7 +584,7 @@ function ifScript() {&#13;
         <sys_updated_by>kevin.dugger</sys_updated_by>
         <sys_updated_on>2021-01-20 15:34:40</sys_updated_on>
         <value/>
-        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
+        <variable display_value="Condition">493cba6a0a6a803f07df24b118473551</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -598,7 +598,7 @@ function ifScript() {&#13;
         <sys_updated_by>kevin.dugger</sys_updated_by>
         <sys_updated_on>2021-01-20 15:34:40</sys_updated_on>
         <value>1</value>
-        <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
+        <variable display_value="Advanced">493d2c1d0a6a803f3217a75738ea3289</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -639,7 +639,7 @@ function ifScript() {&#13;
 	&#13;
 	return;&#13;
 }</value>
-        <variable display_value="">c35e50810a0a0ba96248a709b450fc32</variable>
+        <variable display_value="Script">c35e50810a0a0ba96248a709b450fc32</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="Select Option">29d3a9022f3d201044a3808cf699b660</activity>
@@ -745,7 +745,7 @@ function ifScript() {&#13;
         <sys_updated_by>kevin.dugger</sys_updated_by>
         <sys_updated_on>2021-01-20 15:34:40</sys_updated_on>
         <value>state=3^active=false^EQ</value>
-        <variable display_value="">1cb38c8f0a0a0b266fb48e08de35f507</variable>
+        <variable display_value="Set these values">1cb38c8f0a0a0b266fb48e08de35f507</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -759,7 +759,7 @@ function ifScript() {&#13;
         <sys_updated_by>kevin.dugger</sys_updated_by>
         <sys_updated_on>2021-01-20 15:34:40</sys_updated_on>
         <value>state=3^active=false^EQ</value>
-        <variable display_value="">1cb38c8f0a0a0b266fb48e08de35f507</variable>
+        <variable display_value="Set these values">1cb38c8f0a0a0b266fb48e08de35f507</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="Set Completed State">a5d3a9022f3d201044a3808cf699b65e</activity>
@@ -823,7 +823,7 @@ function ifScript() {&#13;
         <sys_updated_by>kevin.dugger</sys_updated_by>
         <sys_updated_on>2021-01-20 15:34:40</sys_updated_on>
         <value>approval=approved^state=2^EQ</value>
-        <variable display_value="">1cb38c8f0a0a0b266fb48e08de35f507</variable>
+        <variable display_value="Set these values">1cb38c8f0a0a0b266fb48e08de35f507</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -837,7 +837,7 @@ function ifScript() {&#13;
         <sys_updated_by>kevin.dugger</sys_updated_by>
         <sys_updated_on>2021-01-20 15:34:40</sys_updated_on>
         <value>approval=approved^state=2^EQ</value>
-        <variable display_value="">1cb38c8f0a0a0b266fb48e08de35f507</variable>
+        <variable display_value="Set these values">1cb38c8f0a0a0b266fb48e08de35f507</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="Set Initial State">15d3a58e2ff9201044a3808cf699b6cc</activity>

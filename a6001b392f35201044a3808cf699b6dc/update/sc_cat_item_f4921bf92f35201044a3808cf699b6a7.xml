@@ -5,6 +5,7 @@
         <availability>on_desktop</availability>
         <billable>false</billable>
         <category display_value="Can We Help You?">e15706fc0a0a0aa7007fc21e1ab70c2f</category>
+        <checked_out/>
         <cost>0</cost>
         <custom_cart/>
         <delivery_plan/>
@@ -16,6 +17,7 @@
         <display_price_property>non_zero</display_price_property>
         <entitlement_script/>
         <flow_designer_flow/>
+        <fulfillment_automation_level/>
         <group/>
         <hide_sp>false</hide_sp>
         <icon/>
@@ -44,9 +46,11 @@
         <omit_price>false</omit_price>
         <order>0</order>
         <ordered_item_link/>
+        <owner/>
         <picture/>
         <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=f4921bf92f35201044a3808cf699b6a7&amp;sysparm_preview=true", "summary");</preview>
         <price>0</price>
+        <published_ref/>
         <recurring_frequency/>
         <recurring_price>0</recurring_price>
         <request_method>request</request_method>
@@ -54,9 +58,11 @@
         <sc_catalogs>e0d08b13c3330100c8b837659bba8fb4</sc_catalogs>
         <sc_ic_item_staging/>
         <sc_ic_version/>
+        <sc_template/>
         <short_description>Community Demo 01-20-21</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
+        <state/>
         <sys_class_name>sc_cat_item</sys_class_name>
         <sys_created_by>kevin.dugger</sys_created_by>
         <sys_created_on>2021-01-20 05:01:30</sys_created_on>
@@ -69,7 +75,9 @@
         <sys_update_name>sc_cat_item_f4921bf92f35201044a3808cf699b6a7</sys_update_name>
         <sys_updated_by>kevin.dugger</sys_updated_by>
         <sys_updated_on>2021-01-20 17:28:54</sys_updated_on>
+        <taxonomy_topic/>
         <template/>
+        <template_manager_roles/>
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>

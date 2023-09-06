@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="SN-Comm-012021-Demo">865097792f35201044a3808cf699b639</application>
+        <assessment/>
+        <content_page/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>SEPARATOR</link_type>
+        <map_page/>
+        <mobile_title>Informational</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name/>
+        <order>300</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>kevin.dugger</sys_created_by>
+        <sys_created_on>2021-01-20 17:02:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>84d73dce2f3d201044a3808cf699b647</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Informational</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SN-Comm-012021-Demo" source="x_2353_sn_comm_012">a6001b392f35201044a3808cf699b6dc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SN-Comm-012021-Demo">a6001b392f35201044a3808cf699b6dc</sys_scope>
+        <sys_update_name>sys_app_module_84d73dce2f3d201044a3808cf699b647</sys_update_name>
+        <sys_updated_by>kevin.dugger</sys_updated_by>
+        <sys_updated_on>2021-01-20 17:02:31</sys_updated_on>
+        <timeline_page/>
+        <title>Informational</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>

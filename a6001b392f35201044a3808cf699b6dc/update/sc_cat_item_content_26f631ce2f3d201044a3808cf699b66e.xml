@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_content">
+    <sc_cat_item_content action="INSERT_OR_UPDATE">
+        <access_type>restricted</access_type>
+        <active>true</active>
+        <availability>on_desktop</availability>
+        <billable>false</billable>
+        <category/>
+        <content_type>literal</content_type>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description><![CDATA[<ul style="list-style-position: inside;" type="disc"><li>Date :<br />
+<ul style="list-style-position: inside;" type="circle"><li>01/20/21 - 10:00AM</li></ul>
+</li><li>Topic :<br />
+<ul style="list-style-position: inside;" type="circle"><li>Workflow Scripting</li></ul>
+</li><li>Participants :<br />
+<ul style="list-style-position: inside;" type="circle"><li>Kevin Dugger</li></ul>
+</li><li>Duration :<br />
+<ul style="list-style-position: inside;" type="circle"><li>30 Minutes</li></ul>
+</li><li>Details :<br />
+<ul style="list-style-position: inside;" type="circle"><li>Discussion and Demonstration of Scripting in a Workflow.<br />
+<ul style="list-style-position: inside;" type="square"><li>Discuss : [10 Minutes]<br />
+<ul style="list-style-position: inside;" type="disc"><li>Overview of workflow scripting capabilities<br />
+<ul style="list-style-position: inside;" type="disc"><li>Run-Scripts</li><li>Advanced If/Then Statements</li><li>Wait Statements</li></ul>
+</li></ul>
+</li><li>Demonstrate :  [15 Minutes]<br />
+<ul style="list-style-position: inside;" type="disc"><li>Building a Run-script to Parse a list collector containing users, and leveraging the values within</li><li>Building a new Workflow Activity to utilize in a workflow</li></ul>
+</li><li>QA : [5 Mins]</li></ul>
+</li></ul>
+</li><li>Outline :<br />
+<ul style="list-style-position: inside;" type="circle"><li>Welcome [2 Mins]<br />
+<ul style="list-style-position: inside;" type="square"><li>Good Morning, today I will be presenting a discussion of workflow scripting capabilities in service now. </li><li>Today I will highlight some common scriptable activities, and how they can be utilized in a common catalog item.</li></ul>
+</li><li>Intro [5 Mins]<br />
+<ul style="list-style-position: inside;" type="square"><li>Often we have situations where we need to parse or manipulate data provided by a user submitting a catalog item. </li><li>ServiceNow provides various activities out of the box for this within the workflow editor. </li><li>Some common script-able activities are :<br />
+<ul style="list-style-position: inside;" type="disc"><li>If</li><li>Wait Statements</li><li>Run-Scripts</li><li>Create Task</li><li>Catalog Task</li></ul>
+</li><li>By creating custom conditions on these, we can steer the workflow based on the specific output of these.<br />
+<ul style="list-style-position: inside;" type="square"><li>This results in cleaner workflows with fewer extraneous activities</li><li>Examples :<br />
+<ul style="list-style-position: inside;" type="square"><li>Directing the next activity following a catalog task closure, based on a field or state value</li><li>Directing the next activity following a  Run Script, when processing complex data.</li><li>Directing the next activity following a  Timer, where after an elapsed amount of time you need to route depending on a decision made earlier in the workflow.</li></ul>
+</li></ul>
+</li><li>Most all of these make use of, and in some cases rely upon, workflow <strong>scratchpad variables</strong>.<br />
+<ul style="list-style-position: inside;" type="square"><li>These are very useful variables which are definable elements of the <strong>workflow.scratchpad</strong> object.</li><li>They allow the portability of data between workflow activities, so the results of one activity can be used in another.</li></ul>
+</li><li>Run-Scripts are one of the most powerful, but are effectively a blank slate.  <br />
+<ul style="list-style-position: inside;" type="square"><li>Uses :<br />
+<ul style="list-style-position: inside;" type="square"><li>Processing complex data and perform logic that is not typically performed by other workflow activities.</li><li>Updating fields on the Request Item</li><li>Updating Records in general.</li></ul>
+</li><li>Output :<br />
+<ul style="list-style-position: inside;" type="square"><li>Leverage the scratchpad for outputting data for use within the workflow.</li><li>Leverage custom conditions in conjunction with scratchpad variables, for controlling the next transition following the Run-Script.</li></ul>
+</li></ul>
+</li></ul>
+</li><li>Demo Start [15 Mins]<br />
+<ul style="list-style-position: inside;" type="circle"><li>This demo will demonstrate how you can parse a list-collector using a Run-Script in a workflow, collect the user names and their managers, and ultimately output the values into a string field.</li><li>Open Personal Dev Instance</li><li>Demo Catalog Item</li><li>Walk Through Variables<br />
+<ul style="list-style-position: inside;" type="disc"><li>List Collector</li><li>Multi-Row String Variable</li></ul>
+</li><li>Walk Through Workflow<br />
+<ul style="list-style-position: inside;" type="disc"><li>Set Request Item to Work In Progress</li><li>Run Script {Parse List-Collector to Scratchpad Variable}<br />
+<ul style="list-style-position: inside;" type="disc"><li>Code :<br />
+<ul style="list-style-position: inside;" type="disc"><li>
+<pre class="language-javascript"><code>var userOutput &#61; &#34;Pairing of User and Manager\n&#34;;
+var userList &#61; current.variables.demo_list_collector.toString();
+var userRecs &#61; new GlideRecord(&#34;sys_user&#34;);
+userRecs.addQuery(&#34;sys_id&#34;, &#34;IN&#34;, userList);
+userRecs.query();
+
+while (userRecs.next()) {
+	userOutput &#43;&#61; userRecs.getDisplayValue() &#43; &#34; : &#34; &#43; userRecs.manager.getDisplayValue() &#43; &#34;\n&#34;;
+}
+
+workflow.scratchpad.userDetails &#61; userOutput;</code></pre>
+</li></ul>
+</li><li>Explanation :<br />
+<ul style="list-style-position: inside;" type="disc"><li>Variable userOutput is initialized with the header text and a line feed.</li><li>Variable userList is initialized with the stringified contents of the demo_list_collector variable. (Results in a comma-delimited list of sys_id&#39;s).</li><li>Variable userRecs is initialized as a new  GlideRecord object referencing sys_user.</li><li>userRecs is queried, looking for records with sys_id&#39;s matching those returned in userList.</li><li>Loop executes cycling through the records returned in the query.<br />
+<ul style="list-style-position: inside;" type="disc"><li>Each iteration of the loop, the userOutput string is appended with values based on the current row returned from the userRecs GlideObject</li></ul>
+</li><li>The workflow scratchpad variable is initialized with the contents of the userOutput variable.</li></ul>
+</li></ul>
+</li><li>Run Script {Output Scratchpad Variable to Multi-Row String Variable}<br />
+<ul style="list-style-position: inside;" type="disc"><li>Code :<br />
+<ul style="list-style-position: inside;" type="disc"><li>
+<pre class="language-javascript"><code>current.variables.resulting_user_list &#61; workflow.scratchpad.userDetails;</code></pre>
+</li></ul>
+</li><li>Explanation :<br />
+<ul style="list-style-position: inside;" type="disc"><li>The Catalog Variable <strong>resulting_user_list</strong> is populated with the output from the scratchpad variable <strong>userDetails</strong>.</li></ul>
+</li></ul>
+</li><li>Set Request Item to Complete</li></ul>
+</li><li>Demonstrate Catalog item :<br />
+<ul style="list-style-position: inside;" type="disc"><li>Submit Catalog Item with sample data</li><li>Show resulting Request Item with outputted data.</li></ul>
+</li><li>Deep-Dive into the Code in the Workflow/Explanations of the code involved.</li></ul>
+</li></ul>
+</li><li>Resources :<br />
+<ul style="list-style-position: inside;" type="circle"><li>Demo Based :<br />
+<ul style="list-style-position: inside;" type="circle"><li><a href="/$studio.do?sysparm_transaction_scope&#61;a6001b392f35201044a3808cf699b6dc&amp;sysparm_nostack&#61;true" target="_blank" rel="noopener noreferrer nofollow">Community Demo Application</a></li><li><a href="/sp?id&#61;sc_cat_item&amp;sys_id&#61;f4921bf92f35201044a3808cf699b6a7" target="_blank" rel="noopener noreferrer nofollow">Demo Catalog Item [Portal view]</a></li><li><a href="/nav_to.do?uri&#61;sc_cat_item.do?sys_id&#61;f4921bf92f35201044a3808cf699b6a7" target="_blank" rel="noopener noreferrer nofollow">Demo Catalog Item</a></li></ul>
+</li><li>SN Documentation :<br />
+<ul style="list-style-position: inside;" type="circle"><li><a title="GlideRecord API" href="https://docs.servicenow.com/bundle/paris-application-development/page/app-store/dev_portal/API_reference/GlideRecord/concept/c_GlideRecordAPI.html" target="_blank" rel="noopener noreferrer nofollow">GlideRecord API</a></li></ul>
+</li></ul>
+</li></ul>
+<ul style="list-style-position: inside;" type="disc"><li>Discussion :<br />
+<ul style="list-style-position: inside;" type="circle"><li>Pending</li></ul>
+</li></ul>]]></description>
+        <display_price_property>non_zero</display_price_property>
+        <entitlement_script/>
+        <flow_designer_flow/>
+        <group/>
+        <hide_sp>false</hide_sp>
+        <icon/>
+        <ignore_price>false</ignore_price>
+        <image/>
+        <kb_article/>
+        <list_price>0</list_price>
+        <location/>
+        <mandatory_attachment>false</mandatory_attachment>
+        <meta/>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <module/>
+        <name>Presentation Documentation</name>
+        <no_attachment_v2>false</no_attachment_v2>
+        <no_cart>false</no_cart>
+        <no_cart_v2>false</no_cart_v2>
+        <no_delivery_time_v2>false</no_delivery_time_v2>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_quantity_v2>false</no_quantity_v2>
+        <no_search>false</no_search>
+        <no_wishlist_v2>false</no_wishlist_v2>
+        <omit_price>false</omit_price>
+        <order>0</order>
+        <ordered_item_link/>
+        <picture/>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=26f631ce2f3d201044a3808cf699b66e&amp;sysparm_preview=true", "summary");</preview>
+        <price>0</price>
+        <recurring_frequency/>
+        <recurring_price>0</recurring_price>
+        <request_method/>
+        <roles/>
+        <sc_catalogs/>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <short_description>Presentation Documentation</short_description>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <sys_class_name>sc_cat_item_content</sys_class_name>
+        <sys_created_by>kevin.dugger</sys_created_by>
+        <sys_created_on>2021-01-20 17:00:13</sys_created_on>
+        <sys_id>26f631ce2f3d201044a3808cf699b66e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Presentation Documentation</sys_name>
+        <sys_package display_value="SN-Comm-012021-Demo" source="x_2353_sn_comm_012">a6001b392f35201044a3808cf699b6dc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SN-Comm-012021-Demo">a6001b392f35201044a3808cf699b6dc</sys_scope>
+        <sys_update_name>sc_cat_item_content_26f631ce2f3d201044a3808cf699b66e</sys_update_name>
+        <sys_updated_by>kevin.dugger</sys_updated_by>
+        <sys_updated_on>2021-01-20 17:26:40</sys_updated_on>
+        <target>internal</target>
+        <template/>
+        <type>item</type>
+        <url/>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow/>
+    </sc_cat_item_content>
+    <sys_translated_text action="delete_multiple" query="documentkey=26f631ce2f3d201044a3808cf699b66e"/>
+    <fx_price action="delete_multiple" query="id=26f631ce2f3d201044a3808cf699b66e"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>26f631ce2f3d201044a3808cf699b66e</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>kevin.dugger</sys_created_by>
+        <sys_created_on>2021-01-20 17:00:13</sys_created_on>
+        <sys_id>ea6775ce2f3d201044a3808cf699b690</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kevin.dugger</sys_updated_by>
+        <sys_updated_on>2021-01-20 17:00:13</sys_updated_on>
+        <table>sc_cat_item_content</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>recurring_price</field>
+        <id>26f631ce2f3d201044a3808cf699b66e</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>kevin.dugger</sys_created_by>
+        <sys_created_on>2021-01-20 17:00:13</sys_created_on>
+        <sys_id>aa6775ce2f3d201044a3808cf699b691</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kevin.dugger</sys_updated_by>
+        <sys_updated_on>2021-01-20 17:00:13</sys_updated_on>
+        <table>sc_cat_item_content</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

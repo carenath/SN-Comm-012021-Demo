@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="Community Demo 01-20-21">f4921bf92f35201044a3808cf699b6a7</catalog_item>
+        <catalog_variable>IO:b803dff92f35201044a3808cf699b6d4</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <mandatory>false</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>kevin.dugger</sys_created_by>
+        <sys_created_on>2021-01-20 08:16:02</sys_created_on>
+        <sys_id>e75f37312ff5201044a3808cf699b636</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>demo_list_collector</sys_name>
+        <sys_package display_value="SN-Comm-012021-Demo" source="x_2353_sn_comm_012">a6001b392f35201044a3808cf699b6dc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SN-Comm-012021-Demo">a6001b392f35201044a3808cf699b6dc</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_e75f37312ff5201044a3808cf699b636</sys_update_name>
+        <sys_updated_by>kevin.dugger</sys_updated_by>
+        <sys_updated_on>2021-01-20 08:16:02</sys_updated_on>
+        <table/>
+        <ui_policy display_value="Show/Hide/Require User List">8bec733d2fb5201044a3808cf699b6d3</ui_policy>
+        <variable>demo_list_collector</variable>
+        <variable_set/>
+        <visible>false</visible>
+    </catalog_ui_policy_action>
+</record_update>
